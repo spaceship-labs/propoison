@@ -11,5 +11,13 @@ defmodule Propoison.Facebook do
     body
       |> Poison.decode!
       |> Propoison.set_email(@provider)
+      |> avatar
   end
+
+  defp avatar(%{"id" => id} = body) do
+    Dict.put body, "avatar", "https://graph.facebook.com/#{id}/picture?width=100&height=100"
+  end
+
+  defp avatar(body), do: body
+
 end

@@ -5,11 +5,11 @@
   1. Add propoison to your list of dependencies in mix.exs:
 
         def deps do
-          [{:propoison, "~> 0.0.1"}]
+	  [{:propoison, github: "urielaero/propoison"}]
         end
 
-  2. Ensure propoison is started before your application:
+## Test
 
-        def application do
-          [applications: [:propoison]]
-        end
+export FB_TOKEN="YOUR_FACEBOOK_TOKEN"
+
+mix test
