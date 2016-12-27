@@ -4,7 +4,6 @@ defmodule Propoison.FacebookTest do
   @facebook_fields "picture,id,name,first_name,last_name,link,email" 
 
   setup do
-    Propoison.Facebook.start 
     token = System.get_env("FB_TOKEN")
     get = "/me?fields=#{@facebook_fields}&access_token=#{token}"
     body = case  Propoison.Facebook.get(get) do

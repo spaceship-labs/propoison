@@ -3,7 +3,7 @@ defmodule Propoison.Mixfile do
 
   def project do
     [app: :propoison,
-     version: "0.0.1",
+     version: "0.1.0",
      elixir: "~> 1.1-dev",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -27,7 +27,7 @@ defmodule Propoison.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:httpoison, "~> 0.7.2"},
-     {:poison, "~> 1.5"}]
+    [{:httpoison, "~> 0.10.0"},
+     {:poison, "~> 2.2"}]
   end
 end
