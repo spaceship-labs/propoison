@@ -15,7 +15,8 @@ defmodule Propoison.Facebook do
   end
 
   defp avatar(%{"id" => id} = body) do
-    Dict.put body, "avatar", "https://graph.facebook.com/#{id}/picture?width=100&height=100"
+    avatar = "https://graph.facebook.com/#{id}/picture?type=large"
+    Dict.put body, "avatar", avatar 
   end
 
   defp avatar(body), do: body

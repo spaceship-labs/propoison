@@ -20,6 +20,7 @@ defmodule Propoison.FacebookTest do
   end
 
   test "set url avatar", %{body: body} do
-    assert body["avatar"] =~ "picture?width"
+    IO.inspect body["avatar"]
+    assert body["avatar"] =~ "picture?"
   end
 end
